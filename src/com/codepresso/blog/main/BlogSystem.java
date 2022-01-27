@@ -17,6 +17,7 @@ public class BlogSystem {
         int menu;
         boolean isQuit = false;
         Post post = new Post();
+
         while(!isQuit) {
             System.out.println("\n1 - View post list");
             System.out.println("2 - Write a post");
@@ -50,16 +51,22 @@ public class BlogSystem {
                         String content = inputContent();
                         String username = inputUsername();
                         post = new BlogPost(title, content, username);
+                        BlogPost blogPost = new BlogPost(title, content, username);
+                        blogPost.save(post);
                     }
                     else if(postMenu == 2){
                         String title = inputTitle();
                         String content = inputContent();
                         post = new AnonymousPost(title, content);
+                        AnonymousPost anonymousPost = new AnonymousPost(title, content);
+                        anonymousPost.save(post);
                     }
                     else if(postMenu == 3){
                         String content = inputContent();
                         String username = inputUsername();
                         post = new SimplePost(content, username);
+                        SimplePost simplePost = new SimplePost(content, username);
+                        simplePost.save(post);
                     }
                     postManager.writePost(post);
                     break;

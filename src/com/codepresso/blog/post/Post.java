@@ -16,9 +16,9 @@ public class Post extends PostManager {
         this.content = content;
     }
 
-    public void save() {
-        System.out.println("Saving content to database...");
-    }
+//    public void save() {
+//        System.out.println("Saving content to database...");
+//    }
 
     public String toString() {
         return "\n Content: " + content;

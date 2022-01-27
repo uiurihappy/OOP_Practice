@@ -11,7 +11,7 @@ public class BlogPost extends Post {
         this.username = username;
     }
     public void save(Post post) {
-        System.out.println("Saving title, username to database...");
+        System.out.println("Saving title, content, username to database...");
     }
 
     public String toString() {

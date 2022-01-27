@@ -28,7 +28,7 @@ public class PostManager {
         // Post 및 Post를 상속받은 클래스들의 save 메소드 활용
         // postList에 새로운 객체 추가
         // 다형성을 활용
-        post.save();
+        // post.save();
         postList.add(post);
 
     }
